@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Бытовой Мастер | Омск — ремонт стиральных машин и холодильников. Выезд по Омску, отзывы и полезная информация.">
+<title>Бытовой Мастер | Омск</title>
+<style>
+:root{--navy:#031321;--navy2:#071d30;--blue:#08aef2;--blue2:#087df2;--cyan:#19d4ff;--text:#071525;--muted:#63788c;--light:#f2f8fc;--line:#d9e7f0;--white:#fff;--shadow:0 14px 40px rgba(4,31,53,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--text);line-height:1.45}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,calc(100% - 30px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(3,19,33,.96);border-bottom:2px solid var(--cyan);box-shadow:0 6px 25px #0003}
+.nav{height:78px;display:flex;align-items:center;gap:22px}
+.brand{display:flex;align-items:center;gap:10px;min-width:280px}
+.brand img{width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--cyan)}
+.brand-title{font-size:20px;font-weight:900;color:#fff;white-space:nowrap}.brand-title span{color:var(--cyan)}
+.brand-sub{font-size:11px;color:#d8e6ef;font-weight:700;margin-top:2px}
+nav{display:flex;align-items:center;justify-content:center;gap:21px;flex:1;font-size:12px;color:#d4e0e8;font-weight:700}
+nav a:hover{color:var(--cyan)}
+.head-contact{display:flex;align-items:center;gap:9px;color:#fff;font-weight:800;font-size:12px;white-space:nowrap}
+.phone-icon{width:37px;height:37px;border-radius:50%;display:grid;place-items:center;background:var(--blue);font-size:18px}
+.head-contact small{display:block;color:#9eb5c7;font-weight:500;margin-top:2px}
+.hero{background:
+linear-gradient(90deg,rgba(3,19,33,.98) 0%,rgba(3,19,33,.94) 38%,rgba(3,19,33,.36) 68%,rgba(3,19,33,.58) 100%),
+radial-gradient(circle at 80% 45%,#0d4a69,transparent 35%),var(--navy);
+color:#fff;min-height:510px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 35%,rgba(24,194,255,.08),transparent 62%);pointer-events:none}
+.hero-inner{min-height:510px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;position:relative;z-index:1}
+.pills{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:15px}
+.pill{background:linear-gradient(90deg,#0c91e9,#14c8ff);border-radius:20px;padding:6px 11px;font-size:11px;font-weight:900}
+h1{font-size:clamp(37px,5vw,60px);line-height:.98;letter-spacing:-2px;max-width:650px}
+h1 span{color:var(--cyan)}
+.hero p{max-width:580px;color:#d1e0e9;font-size:16px;margin:18px 0 23px}
+.checks{display:flex;gap:17px;flex-wrap:wrap;margin-bottom:25px}
+.check{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:#eef7fb}
+.check i{font-style:normal;color:var(--cyan);font-size:21px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 21px;border-radius:12px;font-weight:900;font-size:13px;transition:.2s}
+.btn-primary{background:linear-gradient(90deg,#08aef2,#0784f3);color:#fff;box-shadow:0 9px 25px #009cf655}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-outline{border:2px solid #0ab7f5;color:#fff;background:#03132188}
+.hero-visual{height:100%;display:flex;align-items:center;justify-content:center;position:relative}
+.appliances{font-size:145px;filter:drop-shadow(0 25px 25px #0008);letter-spacing:-30px}
+.logo-bubble{position:absolute;right:3%;bottom:35px;width:150px;height:150px;border-radius:50%;overflow:hidden;border:3px solid var(--cyan);box-shadow:0 0 35px #00bfff55}
+.logo-bubble img{width:100%;height:100%;object-fit:cover}
+section{padding:48px 0}
+.section-title{margin-bottom:25px}
+.section-title h2{font-size:29px}.section-title p{color:var(--muted);font-size:13px;margin-top:3px}
+.content-grid{display:grid;grid-template-columns:1.7fr 1fr;gap:18px}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.service,.why,.reviews,.info,.area,.formbox,.cta{background:#fff;border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow)}
+.service{padding:14px;display:grid;grid-template-columns:105px 1fr;gap:14px;align-items:center}
+.service-img{height:105px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#d9eaf4,#f9fcff);font-size:70px}
+.service h3{font-size:17px}.service p{font-size:11px;color:var(--muted);margin:5px 0 9px}.price{display:inline-block;background:linear-gradient(90deg,#08aef2,#0784f3);color:#fff;padding:7px 12px;border-radius:20px;font-size:12px;font-weight:900}
+.why{padding:18px}.why h3{font-size:22px;margin-bottom:15px}.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.why-item{text-align:center}.why-icon{width:43px;height:43px;margin:auto auto 7px;border-radius:50%;background:#e5f5ff;color:#078be7;display:grid;place-items:center;font-size:21px}.why-item b{font-size:11px;display:block}.why-item span{font-size:10px;color:var(--muted)}
+.bottom-grid{display:grid;grid-template-columns:1.55fr .85fr;gap:18px}
+.reviews{padding:18px;background:var(--navy2);color:#fff}.review-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.review-head h3{font-size:22px}.review-head a{color:var(--cyan);font-size:11px}.review-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.review{border:1px solid #236082;border-radius:11px;padding:13px;background:#052238}.stars{color:#ffd13b;font-size:13px;letter-spacing:2px}.review p{font-size:10px;color:#d9e6ee;margin:7px 0}.review small{color:#91b1c3;font-size:9px}
+.info{padding:18px}.info h3{font-size:21px;margin-bottom:7px}.info>p{font-size:11px;color:var(--muted);margin-bottom:8px}.info-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line);font-size:11px}.info-row span{color:var(--muted)}
+.lower{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:18px}.area,.cta{padding:20px;min-height:220px}.area{background:linear-gradient(145deg,#062039,#0b3855);color:#fff;position:relative;overflow:hidden}.area:after{content:"📍";position:absolute;right:18px;bottom:4px;font-size:90px;opacity:.12}.area h3{font-size:22px;margin-bottom:8px}.area p{color:#c7dbe7;font-size:12px;margin-bottom:20px}.small-btn{display:inline-block;border:1px solid var(--cyan);border-radius:10px;padding:9px 13px;font-size:11px;font-weight:900;color:#fff}
+.cta{background:linear-gradient(145deg,#061a2b,#082f4a);color:#fff;display:flex;flex-direction:column;justify-content:center}.cta h3{font-size:22px}.cta p{color:#b9cedb;font-size:11px;margin:7px 0 18px}.cta .btn{font-size:11px;margin-bottom:8px}
+footer{background:#031321;color:#c7d6df;border-top:2px solid var(--cyan);padding:22px 0}.foot{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.foot-brand{display:flex;align-items:center;gap:9px}.foot-brand img{width:43px;height:43px;border-radius:50%}.foot-brand b{display:block;color:#fff;font-size:12px}.foot-brand small{font-size:9px}.foot-links{display:flex;gap:17px;font-size:10px}.foot-links a:hover{color:var(--cyan)}.copy{font-size:9px;color:#718b9d}
+@media(max-width:950px){nav{display:none}.brand{flex:1}.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}.content-grid,.bottom-grid{grid-template-columns:1fr}.lower{grid-template-columns:1fr}.hero{min-height:auto}.hero-inner{padding:55px 0}}
+@media(max-width:650px){.container{width:calc(100% - 22px)}.brand-title{font-size:15px}.brand-sub{font-size:9px}.head-contact{display:none}.services,.review-cards{grid-template-columns:1fr}.service{grid-template-columns:85px 1fr}.service-img{height:85px;font-size:55px}.why-grid{grid-template-columns:repeat(2,1fr)}h1{letter-spacing:-1.5px}.checks{gap:9px}.actions .btn{width:100%}.lower{margin-top:12px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container nav">
+<a class="brand" href="#">
+<img src="logo.jpeg" alt="Бытовой Мастер Омск">
+<div><div class="brand-title">БЫТОВОЙ МАСТЕР <span>| ОМСК</span></div><div class="brand-sub">Ремонт стиральных машин и холодильников</div></div>
+</a>
+<nav><a href="#home">Главная</a><a href="#services">Услуги</a><a href="#reviews">Отзывы</a><a href="#useful">Полезное</a><a href="#contacts">Контакты</a></nav>
+<div class="head-contact"><div class="phone-icon">☎</div><div><a href="tel:+79136480901">+7 913 648 09 01</a><small>Звоните / Пишите в Telegram</small></div></div>
+</div>
+</header>
+
+<main id="home">
+<section class="hero">
+<div class="container hero-inner">
+<div>
+<div class="pills"><span class="pill">Быстро</span><span class="pill">Качественно</span><span class="pill">С гарантией</span></div>
+<h1>РЕМОНТ СТИРАЛЬНЫХ МАШИН<br><span>И ХОЛОДИЛЬНИКОВ</span></h1>
+<p>Не спешите покупать новую технику — часто её можно быстро и выгодно восстановить!</p>
+<div class="checks"><div class="check"><i>◆</i> Опытные мастера</div><div class="check"><i>●</i> Выезд по Омску и области</div><div class="check"><i>♥</i> Честные цены</div></div>
+<div class="actions">
+<a class="btn btn-primary" href="https://t.me/master_omsk_55" target="_blank">✈ Перейти в Telegram-канал</a>
+<a class="btn btn-outline" href="tel:+79136480901">☎ Позвонить +7 913 648 09 01</a>
+</div>
+</div>
+<div class="hero-visual">
+<div class="appliances">🧺 ❄️</div>
+<div class="logo-bubble"><img src="logo.jpeg" alt="Логотип"></div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="section-title"><h2>Наши услуги</h2><p>Ремонтируем популярные бренды бытовой техники.</p></div>
+<div class="content-grid">
+<div class="services">
+<div class="service"><div class="service-img">🧺</div><div><h3>Ремонт стиральных машин</h3><p>LG · Samsung · Bosch · Indesit · Ariston · Beko и др.</p><span class="price">от 500 ₽</span></div></div>
+<div class="service"><div class="service-img">❄️</div><div><h3>Ремонт холодильников</h3><p>Samsung · LG · Bosch · Atlant · Indesit · Stinol и др.</p><span class="price">от 700 ₽</span></div></div>
+</div>
+<div class="why"><h3>Почему выбирают нас?</h3><div class="why-grid">
+<div class="why-item"><div class="why-icon">♧</div><b>Реальные отзывы</b><span>клиентов</span></div>
+<div class="why-item"><div class="why-icon">◉</div><b>Гарантия</b><span>на работы</span></div>
+<div class="why-item"><div class="why-icon">✓</div><b>Честный подход</b><span>к ремонту</span></div>
+<div class="why-item"><div class="why-icon">⚒</div><b>Аккуратная</b><span>работа</span></div>
+<div class="why-item"><div class="why-icon">⚒</div><b>Современное</b><span>оборудование</span></div>
+<div class="why-item"><div class="why-icon">✓</div><b>Без навязывания</b><span>ненужных услуг</span></div>
+</div></div>
+</div>
+</div>
+</section>
+
+<section id="reviews">
+<div class="container bottom-grid">
+<div class="reviews"><div class="review-head"><div><h3>Отзывы наших клиентов</h3><small>Реальные люди. Настоящие отзывы.</small></div><a href="https://t.me/master_omsk_55" target="_blank">Смотреть все отзывы →</a></div>
+<div class="review-cards">
+<div class="review"><b>Алексей Петров</b><div class="stars">★★★★★</div><p>Отличный мастер! Стиральная машина начала сильно шуметь, приехал быстро, всё починил. Цена адекватная.</p><small>Клиент, Омск</small></div>
+<div class="review"><b>Ирина Смирнова</b><div class="stars">★★★★★</div><p>Починили холодильник, который не охлаждал. Всё работает отлично! Спасибо за честность и профессионализм.</p><small>Клиент, Омск</small></div>
+<div class="review"><b>Дмитрий К.</b><div class="stars">★★★★★</div><p>Быстро, качественно, без лишних разговоров. Очень доволен работой.</p><small>Клиент, Омск</small></div>
+</div></div>
+<div class="info" id="useful"><h3>Полезная информация</h3><p>Советы, которые помогут избежать поломок.</p>
+<a class="info-row" href="https://t.me/master_omsk_55" target="_blank" rel="noopener"><b>Как продлить срок службы стиральной машины</b><span>›</span></a>
+<a class="info-row" href="https://t.me/master_omsk_55" target="_blank" rel="noopener"><b>Почему холодильник плохо охлаждает?</b><span>›</span></a>
+<a class="info-row" href="https://t.me/master_omsk_55" target="_blank" rel="noopener"><b>Частые неисправности и их причины</b><span>›</span></a>
+<a class="info-row" href="https://t.me/master_omsk_55" target="_blank" rel="noopener"><b>Как правильно ухаживать за техникой</b><span>›</span></a>
+</div>
+</div>
+</section>
+
+<section id="contacts">
+<div class="container lower">
+<div class="area"><h3>Работаем в Омске и ближайших районах</h3><p>Выезжаем к вам в удобное для вас время. Быстро и аккуратно.</p><a class="small-btn" href="https://t.me/master_omsk_55" target="_blank">Показать районы →</a></div>
+<div class="cta"><h3>Сломалась техника?</h3><p>Напишите нам в чат или позвоните прямо сейчас!</p><a class="btn btn-primary" href="https://t.me/bytovoy_master_bot" target="_blank">✈ Написать боту</a><a class="btn btn-outline" href="tel:+79136480901">☎ +7 913 648 09 01</a></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container foot">
+<div class="foot-brand"><img src="logo.jpeg" alt="Логотип"><div><b>БЫТОВОЙ МАСТЕР | ОМСК</b><small>Ремонт стиральных машин и холодильников</small></div></div>
+<div class="foot-links"><a href="#home">Главная</a><a href="#services">Услуги</a><a href="#reviews">Отзывы</a><a href="#useful">Полезное</a><a href="#contacts">Контакты</a></div>
+<div><a href="https://t.me/master_omsk_55" target="_blank">✈ @master_omsk_55</a><br><a href="tel:+79136480901">☎ +7 913 648 09 01</a></div>
+<div class="copy">© 2026 Бытовой Мастер | Омск. Все права защищены.</div>
+</div>
+</footer>
+
+
+</body>
+</html>
